@@ -14,4 +14,6 @@ python -m http.server 8000
 
 ## GitHub Pages
 
+在线访问：[https://junjiecharles.github.io/blog/](https://junjiecharles.github.io/blog/)
+
 将仓库推送到 GitHub 后，在仓库的 **Settings → Pages** 中选择从当前分支的根目录发布即可。
