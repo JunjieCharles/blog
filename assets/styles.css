@@ -146,6 +146,11 @@ body {
   stroke-linejoin: round;
 }
 
+.profile-links .brand-icon {
+  fill: currentColor;
+  stroke: none;
+}
+
 .character-card {
   position: relative;
   z-index: 1;
