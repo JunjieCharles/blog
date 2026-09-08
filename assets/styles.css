@@ -172,7 +172,8 @@ body {
   border-bottom: 3px solid var(--navy);
 }
 
-h1 {
+h1,
+.section-title h2 {
   margin: 0;
   font-family: Georgia, "Noto Serif SC", serif;
   font-size: clamp(2.2rem, 5vw, 3.5rem);
@@ -185,6 +186,66 @@ h1 {
   font-weight: 800;
   letter-spacing: 0.18em;
 }
+
+.websites { margin-bottom: 4.5rem; }
+
+.website-list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.5rem;
+  margin: 1.5rem 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.website-card {
+  display: grid;
+  grid-template-columns: 72px minmax(0, 1fr) auto;
+  gap: 1.25rem;
+  align-items: center;
+  height: 100%;
+  padding: 1.75rem;
+  color: var(--navy);
+  background: var(--paper);
+  border: 1px solid var(--line);
+  box-shadow: 5px 5px 0 var(--blue-soft);
+  text-decoration: none;
+  transition: transform 0.18s, box-shadow 0.18s, border-color 0.18s;
+}
+
+.website-card:hover,
+.website-card:focus-visible {
+  border-color: var(--red);
+  box-shadow: 7px 7px 0 var(--red-soft);
+  transform: translate(-2px, -2px);
+}
+
+.website-card:focus-visible {
+  outline: 2px solid var(--navy);
+  outline-offset: 4px;
+}
+
+.website-logo {
+  display: block;
+  width: 72px;
+  height: 72px;
+  object-fit: contain;
+}
+
+.website-copy h3 {
+  margin: 0;
+  font-family: Georgia, "Noto Serif SC", serif;
+  font-size: 1.45rem;
+  line-height: 1.35;
+}
+
+.website-copy p {
+  margin: 0.5rem 0 0;
+  color: var(--muted);
+  font-size: 0.85rem;
+}
+
+.website-arrow { color: var(--red); font-size: 1.5rem; }
 
 .post-list { margin: 0; padding: 0; list-style: none; }
 
@@ -267,6 +328,8 @@ footer {
   }
   .profile-copy { padding: 2.5rem 1.7rem; }
   .character-card { width: 100%; margin-right: -0.8rem; padding: 0.45rem; }
+  .websites { margin-bottom: 3.5rem; }
+  .website-list { grid-template-columns: 1fr; }
 }
 
 @media (max-width: 560px) {
@@ -291,6 +354,9 @@ footer {
   }
   .hero-pattern { right: 0; }
   .section-title { align-items: center; }
+  .website-card { grid-template-columns: 56px minmax(0, 1fr) auto; gap: 0.9rem; padding: 1.25rem 1rem; }
+  .website-logo { width: 56px; height: 56px; }
+  .website-copy h3 { font-size: 1.25rem; }
   .post-list article {
     grid-template-columns: 1fr auto;
     gap: 0.7rem 1rem;
